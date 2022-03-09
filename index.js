@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const app = require('./express/app');
 const sequelize = require('./sequelize');
 const PORT = 4000;
@@ -17,10 +19,10 @@ async function assertDatabaseConnectionOk() {
 async function init() {
 	await assertDatabaseConnectionOk();
 
-	console.log(`Starting Sequelize + Express example on port ${PORT}...`);
+	// console.log(`Starting Sequelize + Express example on port ${PORT}...`);
 
 	app.listen(PORT, () => {
-		console.log(`Express server started on port ${PORT}. Try some routes, such as '/api/users'.`);
+		console.log(`Express server started on port ${PORT}'.`);
 	});
 }
 
